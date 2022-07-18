@@ -1,0 +1,406 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[super]{nth}
+\usepackage{latexsym}
+\usepackage{comment}
+\usepackage{textcomp}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{lastpage}
+\usepackage[margin=1.5cm, bottom=2cm]{geometry}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+%\cfoot{\vspace{0.5cm}Page \thepage\ of \pageref*{LastPage}}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{: #2}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      #3 &  #4 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      #3 & #4 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.98\textwidth}{lr}
+      #1 & #2 \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-4pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+
+\multirow{4}{*}{\Huge Sepehr Saeedpour\hspace*{\fill}} & Email: \href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
+                   & Phone: +98 938 422 7574 \\
+                   & \href{https://www.linkedin.com/in/sepsad}{Linkedin} \\
+                   & \href{https://github.com/sepsad}{Github} \\ 
+                   & \href{https://sepsad.github.io}{Sepsad.github.io}
+
+\end{tabular*}
+\section{Research Interests}
+\vspace*{-\multicolsep}
+\begin{center}
+\begin{multicols}{3}
+	
+\begin{itemize}
+\item Learning \& Decision-making \\
+\item Neuroscience \\
+\item Cognitive Modeling \\
+\item Statistics
+\item  Artificial Intelligence
+\item Cognitive Science
+\end{itemize}
+
+%\item Computer vision
+%\item Bioinformatics
+
+\end{multicols}
+\end{center}
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Tehran}{Tehran, Iran}
+      {B.Sc. in Electrical Engineering, \textbf{GPA: 3.55/4}}{Sep 2017 - Present}
+      \begin{itemize}
+      	\vspace{-7.5pt}
+      	\item Expected graduation date: December 2022 % \hfill Expected graduation date: December 2022
+      \end{itemize}
+    \resumeSubheading
+    	{Allameh Helli 1 High School}{Tehran, Iran}
+    	{Diploma in Mathematics and Physics Discipline, \textbf{GPA: 19.09/20}}{Sep 2013 - Jun 2017}
+
+    	Affiliated with the National Organization for the Development of Exceptional Talents (NODET)
+  \resumeSubHeadingListEnd
+\section{Research Experience}
+  \resumeSubHeadingListStart
+% --------EXPERIENCE------------
+    \resumeSubheading
+      {Ludwig-Maximilians-Universität München - \href{https://crowdcognition.net/}{Crowd Cognition Group}}{Remote}
+      {Undergraduate Research Assistant}{June 2021 - Present}
+       \textbf{Supervisor: Prof. Bahador Bahrami}
+      \resumeItemListStart
+      	\item My research is focused on interindividual difference in learning to act or avoid
+      	\item Implemented the orthogonal go/nogo task using jsPsych that its demo could be accessed via this \href{https://7sbyszisu9.cognition.run/}{link}
+      	\item Analyzed the behavioral data using mixed-model regression and reinfocement learning models
+      	\item Pre-Registration of the research: \href{https://osf.io/rndpf}{osf.io/rndpf}
+      	\begin{itemize}[label=$-$]
+      		% \item Found a new and much simpler algorithm resulting state of the art in the adversarial arrival of edges
+      		% \item Found an algorithm for random arrival showing experimental improved by 80 percent
+      		% \item Planing to publish the work soon
+      		\item B.Sc. Thesis project
+      	\end{itemize}
+	%\item Supervised by \href{http://sharif.edu/~zarrabi/}{Prof. Hamid Zarrabi-Zadeh}, Assistant Professor at Sharif University of Technology.
+      \resumeItemListEnd
+      \resumeSubheading
+      {University of Tehran - \href{https://btcs.ut.ac.ir/}{BTCS lab} }{Tehran, Iran}
+      {Undergraduate Research Assistant}{Summer 2019}
+      \textbf{Supervisor: Dr. M.R. Abolghasemi Dahaqani}
+      \resumeItemListStart
+          \item Tried to replicate \href{https://pubmed.ncbi.nlm.nih.gov/25761001/}{"Preconscious Prediction of a Driver’s Decision Using Intracranial Recordings"}
+          \item Learned about using machine learning algorithms (such as SVM) for analyzing EEG data
+          % \item           
+      	% \item In this internship our project was attacking trajectory prediction models. We studied the impact of localization errors on their predictions which is essential for real-world applications.
+      	     	% \begin{itemize}[label=$-$]
+      		%\item Implementation and documentation: \href{https://github.com/vita-epfl/s-attack}{github.com/vita-epfl/s-attack}
+      		%\item Published work: \href{https://arxiv.org/abs/2108.10879}{Are socially-aware trajectory prediction models really socially-aware?} submitted to Elsevier
+      	% \end{itemize}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {University of Tehran - Cognitive Systems Lab}{Tehran, Iran}
+      {Undergraduate Research Assistant}{Summer 2018}
+      \textbf{Supervisor: Prof. Majid Nili Ahmadabadi}
+      \resumeItemListStart
+          \item Worked on a project on the subject of "Academic Dishonesty"
+          % \item           
+      	% \item In this internship our project was attacking trajectory prediction models. We studied the impact of localization errors on their predictions which is essential for real-world applications.
+      	     	% \begin{itemize}[label=$-$]
+      		%\item Implementation and documentation: \href{https://github.com/vita-epfl/s-attack}{github.com/vita-epfl/s-attack}
+      		%\item Published work: \href{https://arxiv.org/abs/2108.10879}{Are socially-aware trajectory prediction models really socially-aware?} submitted to Elsevier
+      	% \end{itemize}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  % \section{Publications}
+  % \begin{itemize}
+  % \item S. Saadatnejad, M. Bahari, P. Khorsandi, \textbf{M. Saneian}, M. Moosavi-Dezfooli, A.Alahi, \href{https://arxiv.org/abs/2108.10879}{"Are socially-aware trajectory prediction models really socially-aware?"}, submitted to Elsevier
+  % \end{itemize}
+
+  \section{Work Experience}
+  \resumeSubHeadingListStart
+      
+% --------EXPERIENCE------------
+
+    \resumeSubheading
+      {YUZ Games Studio - \href{https://cafebazaar.ir/app?l=en}{Cafe Bazaar}}{Tehran, Iran}
+      {Game Data Analyst}{Apr. 2021 - Present}
+      \resumeItemListStart
+        \item Using statistical and machine learning approaches to analyze YOYO games' users’ behavior in the game and optimizing various aspects of the game and levels to make for better and better user experience.
+        \item Cafe Bazaar the most popular Android application store in Iran, with more than 40 million users.
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {People Analytics Team - \href{https://cafebazaar.ir/app?l=en}{Cafe Bazaar}  }{Tehran, Iran}
+      {Human Resources Data Analyst}{Jun. 2019 - Apr. 2021}
+      \resumeItemListStart
+      	\item Using data-driven approaches to analyze employees performance and other related metrics to help the company make better decisions for creating a more productive work environment.
+      	% \item Became familiar with data analytics tools, such as Metabase and Pandas.
+
+      \resumeItemListEnd
+
+    \resumeSubheading
+    {Allame Helli 1 High school}{Summer 2017 - Spring 2019}
+    {Olympiad in Astronomy Instructor}{}
+    \resumeItemListStart
+    \item Taught Data Analysis methods to students preparing for the National Olympiad in Astronomy \& Astrophysics (NOAA).
+    \resumeItemListEnd
+
+  % \resumeSubHeadingListEnd
+
+
+  % \section{Honors and Awards}
+  
+  % \resumeSubHeadingListStart
+  
+  % % \item \textbf{Silver Medalist} in the \nth{29} International Olympiad of Informatics (IOI) \hfill 2017
+  % % \item \textbf{Onsite contest finalist} at Snackdown19, ranked \textbf{22th} among \textbf{25,000} teams \hfill  2019
+  
+  % %  \item \textbf{Silver Medalist} in the \nth{11} Asia-Pacific Informatics Olympiad (APIO) \hfill  2017
+  % \item \textbf{Silver Medalist} in the \nth{12} National Olympiad of Astronomy and Astrophysics (NOAA) \hfill 2016
+  % \\
+ 	% \small
+  % 	Silver medals are awarded to about 10 people selected after a year of competition among over 10000 students.
+  % 	\normalsize
+	
+  % \item \textbf{4th \& 11th Team} in the ACM ICPC regional contest \hfill Respectively 2018, 2017
+  
+  % %  \item \textbf{Gold medalist} in the ACM ICPC regional contest \hfill  2018
+    
+    
+  %   \item \textbf{National Organization for Development of Exceptional Talents} (NODET) member \hfill  2010 – 2017
+ 
+    
+ \newpage
+  \resumeSubHeadingListEnd
+%   \section{Selected Courses}
+%   \vspace*{-\multicolsep}
+%   \begin{multicols}{2}
+% \resumeSubHeadingListStart
+%   	\item Data Structures and Algorithms (20/20)
+%   	\item Design of Algorithms (20/20)
+%   	\item Probability and Statistics (18.1/20)
+%   	\item Automata, Computability, Complexity Theory (18.2/20)
+%   	\item Artificial Intelligence (20/20)
+%   	\item Advanced Information Retrieval (18.2/20)
+%   	\item (Graduate) High-dim probability analysis (16.9/20)
+%   	\item (Graduate) ML for Bioinformatics (17.9/20)
+%   	\item (Graduate) Distributed Computing (18.1/20)
+%   	\item (Graduate) Approximation Algorithms (Currently enrolled)
+%   	\resumeSubHeadingListEnd
+%   \end{multicols}
+
+\section{Honors and Awards}
+  
+\resumeSubHeadingListStart
+
+% \item \textbf{Silver Medalist} in the \nth{29} International Olympiad of Informatics (IOI) \hfill 2017
+% \item \textbf{Onsite contest finalist} at Snackdown19, ranked \textbf{22th} among \textbf{25,000} teams \hfill  2019
+
+%  \item \textbf{Silver Medalist} in the \nth{11} Asia-Pacific Informatics Olympiad (APIO) \hfill  2017
+\item \textbf{Silver Medalist} in the \nth{12} National Olympiad of Astronomy and Astrophysics (NOAA) \hfill 2016
+\\
+ \small
+  Silver medals are awarded to about 10 people selected after a year of competition among over 10000 students.
+  \normalsize
+
+\item \textbf{4th \& 11th Team} in the ACM ICPC regional contest \hfill Respectively 2018, 2017
+
+%  \item \textbf{Gold medalist} in the ACM ICPC regional contest \hfill  2018
+  
+  
+  \item \textbf{National Organization for Development of Exceptional Talents} (NODET) member \hfill  2010 – 2017
+
+  \resumeSubHeadingListEnd
+% \section{Work Experience}
+%   \resumeSubHeadingListStart
+      
+% % --------EXPERIENCE------------
+
+%     \resumeSubheading
+%       {YOYO Game Studio - \href{https://cafebazaar.ir/app?l=en}{Cafe Bazaar}}{Tehran, Iran}
+%       {Game Data Analyst}{Apr. 2021 - Present}
+%       \resumeItemListStart
+%         \item Using statistical and machine learning approaches to analyze YOYO games' users’ behavior in the game and optimizing various aspects of the game and levels to make for better and better user experience.
+%       \resumeItemListEnd
+
+%     \resumeSubheading
+%       {People Analytics Team - \href{https://cafebazaar.ir/app?l=en}{Cafe Bazaar}  }{Tehran, Iran}
+%       {Human Resources Data Analyst}{Jun. 2019 - Apr. 2021}
+%       \resumeItemListStart
+%       	\item Using data-driven approaches to analyze employees performance and other related metrics to help the company make better decisions for creating a more productive work environment.
+%       	\item Became familiar with data analytics tools, such as Metabase and Pandas.
+%       	% \item Did a team project for detecting fraudulent comments on \href{https://sanjagh.com/}{Sanjagh website} based on their extracted features.
+
+%       \resumeItemListEnd
+
+%     \resumeSubheading
+%     {Allame Helli 1 High school}{Summer 2017 - Spring 2019}
+%     {Olympiad in Astronomy Instructor}{}
+%     \resumeItemListStart
+%     \item Taught Data Analysis methods to students preparing for the National Olympiad in Astronomy \& Astrophysics (NOAA).
+%     \resumeItemListEnd
+
+%   \resumeSubHeadingListEnd
+
+\section{Teaching Experience}
+  \resumeSubHeadingListStart
+      
+    \resumeSubheading
+      {Teaching Assistant, ECE Department}{}
+      {University of Tehran}{}
+      \resumeItemListStart
+      	\resumeItem{Machine Learning}{Instructors: Prof. Nadjar Araabi \& Dr. Abolghasemi Dahaqani \hfill Fall 2020}
+       	\resumeItem{Engineering Probability and Statistics}{Instructor: Dr. Behnam Bahrak \hfill Spring 2020}
+       	\resumeItem{Engineering Probability and Statistics}{Instructor: Dr. Abolghasemi Dahaqani \hfill Fall 2019}
+      	% \resumeItem{Artificial Intelligence}{Instructor: Prof. M.Hossein Rohban \hfill  Fall 2020}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+  %-----------PROJECTS-----------------
+\section{Leadership and Membership Experience}
+\resumeSubHeadingListStart
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resumeSubheading
+% {Olympiad in Informatics Instructor}{Summer 2017 - Fall 2018}
+% {Allame Helli 1 High school}{}
+% \resumeItemListStart
+% \item Taught Algorithms and Data Structures to students preparing for the National Olympiad in Informatics (INOI).
+% \resumeItemListEnd
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resumeSubheading
+{Member of \href{https://crowdcognition.net/journalclub/}{SocNeuroCrowdJC}}
+{June 2021 - Present}{}
+
+\resumeItemListStart
+\vspace{-0.35cm} 
+\item Participating in journal club sessions  %0\hfill Spring-2021
+% \item Scientific Committee, Iran’s National Olympiad in informatics, final exams theory problems. %\hfill Summer-2020
+% \item Scientific member of Rasta school at summer 2020, developed creative methods to teach Flow algorithms to high school students.
+\resumeItemListEnd
+
+
+
+\resumeSubheading
+{Executive Director and Scientific Staff}
+{Winter 2019}{University of Tehran}
+
+\resumeItemListStart
+\item Director at CNCS 2019, Cognitive Neuroscience Competiton for Students
+\item Gathered speakers on different topics in cognitive science, Managed a team to execute the event.
+%\item Presented a talk about Applications of blockchain such as DAOs, stablecoins, etc.
+\resumeItemListEnd
+
+
+\resumeSubheading
+{Performing Arts Club Vice Chair}
+{2019}{University of Tehran}
+
+\resumeItemListStart
+% \vspace{-0.35cm} 
+\item Managed the activities of Theater groups, shows and performances, workshops and events around Performing Arts in University of Tehran. %0\hfill Spring-2021
+% \item Scientific Committee, Iran’s National Olympiad in informatics, final exams theory problems. %\hfill Summer-2020
+% \item Scientific member of Rasta school at summer 2020, developed creative methods to teach Flow algorithms to high school students.
+\resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
+
+\section{Skills}
+  \resumeSubHeadingListStart
+    % \resumeItem{TOEFL} {Total: 104, Reading: 25, Listening: 30, Speaking: 26, Writing: 23}
+    \resumeItem{Programming}{Python, R, MATLAB, Sql, C++, JavaScript, Bash}
+    \resumeItem{Statistics \& Modelling}{Statistical Tests, GLM models, Reinfocement Learning models}
+    \resumeItem{Online Experiment Design}{jsPsych, PsychoToolBox, Cognition.run}
+    \resumeItem{Data Analytics Frameworks}{Pandas, Statsmodels, NumPy, Scikit-Learn}
+    \resumeItem{Visualization Frameworks}{Matplotlib, Seaborn, Plotly, ggplot2}
+    \resumeItem{Web Development \& Database}{HTML, CSS, Node.js, Docker, PostgreSQL}
+
+    \resumeItem{Miscellaneous}{Git, Jupyter Notebook, Linux, Windows, \LaTeX, Microsoft Office (Word, Excel, Powerpoint)}
+
+
+  \resumeSubHeadingListEnd
+  
+%\section{Hobbies}
+%  \resumeSubHeadingListStart
+%    \resumeItem{Sports}{Table Tennis, Mountain Climbing}
+%    \resumeItem{Arts}{Playing the Piano, Photography}
+%  \resumeSubHeadingListEnd
+\end{document}
