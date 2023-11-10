@@ -9,7 +9,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{hyperref}
+% \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -17,7 +17,13 @@
 \usepackage{multicol}
 \usepackage{lastpage}
 \usepackage[margin=1.5cm, bottom=2cm]{geometry}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
 \input{glyphtounicode}
+
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -92,29 +98,42 @@
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 
-\multirow{4}{*}{\Huge Sepehr Saeedpour\hspace*{\fill}} & Email: \href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
-                   & Phone: +98 938 422 7574 \\
-                   & \href{https://www.linkedin.com/in/sepsad}{Linkedin} \\
-                   & \href{https://github.com/sepsad}{Github} \\ 
-                   & \href{https://sepsad.github.io}{Sepsad.github.io}
-
+  
+  \multirow{2}{*}{\Huge Sepehr Saeedpour\hspace*{\fill}}    &\href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
+                                                            &+98 938 422 7574 \\
+                                                            & Linkedin: \href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad} \\
+% Prospective Ph.D student for the Gatsby Institute's program   
+                                                      & Github: \href{https://github.com/sepsad}{github.com/sepsad} \\ 
+                                                       & Personal Page: \href{https://sepsad.github.io}{sepsad.github.io} \\
 \end{tabular*}
-\section{Research Interests}
-\vspace*{-\multicolsep}
-\begin{center}
-\begin{multicols}{3}
+
+
+
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \multirow{4}{*}{\Huge Sepehr Saeedpour} & \href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
+%   & +98 938 422 7574 \\
+%   & Linkedin: \href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad} \\
+%   & Github: \href{https://github.com/sepsad}{github.com/sepsad} \\ 
+%   & Personal Page: \href{https://sepsad.github.io}{sepsad.github.io} \\
+%   \end{tabular*}
+  
+  
+% \section{Research Interests}
+% \vspace*{-\multicolsep}
+% \begin{center}
+% \begin{multicols}{3}
 	
-\begin{itemize}
-\item Learning \& Decision-making \\
-\item Cognitive science \\
-\item Machine Learning \\
-\end{itemize}
+% \begin{itemize}
+% \item Learning \& Decision-making \\
+% \item Cognitive science \\
+% \item Machine Learning \\
+% \end{itemize}
 
-%\item Computer vision
-%\item Bioinformatics
+% %\item Computer vision
+% %\item Bioinformatics
 
-\end{multicols}
-\end{center}
+% \end{multicols}
+% \end{center}
 
 
 %-----------EDUCATION-----------------
@@ -124,8 +143,9 @@
       {University of Tehran}{Tehran, Iran}
       {B.Sc. in Electrical Engineering}{2017 - 2022}
       \begin{itemize}
-      	\vspace{-7.5pt}
-      	\item Thesis: Pavlovian bias test/retest reliability.
+      	\vspace{-3pt}
+      	\item Thesis: Interindividual differences in Learning to Act or Avoid. 
+        \item Recognized with the Best Undergraduate Thesis Award in ECE school.
       \end{itemize}
     \resumeSubheading
     	{Allameh Helli 1 High School}{Tehran, Iran}
@@ -133,19 +153,47 @@
 
     	Affiliated with the National Organization for the Development of Exceptional Talents (NODET)
   \resumeSubHeadingListEnd
+
+  \section{Publications}
+  \begin{itemize}
+
+  % --------PUBLICATIONS------------
+  \item \textbf{Saeedpour, S.}, Miandari, M., Deroy, O., Bahrami, B. (2023). Interindividual differences in Pavlovian influence on learning are consistent, Royal Society Open Science, \href{https://royalsocietypublishing.org/doi/10.1098/rsos.230447}{doi.org/10.1098/rsos.230447}
+  \item Navidi, P., \textbf{Saeedpour, S.}, Miandari, M., Ershadmanesh, S.,  Bahrami, B. (2023). Prosocial learning: Model-based or model-free?, PLoS One, \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287563}{doi.org/10.1371/journal.pone.0287563}
+  \end{itemize}
 \section{Research Experience}
   \resumeSubHeadingListStart
+
 % --------EXPERIENCE------------
     \resumeSubheading
-      {Ludwig-Maximilians-Universität München - \href{https://crowdcognition.net/}{Crowd Cognition Group}}{Remote}
+      {Ludwig Maximilians Universität München - \href{https://crowdcognition.net/}{Crowd Cognition Group}}{Remote}
       {Research Assistant}{June 2021 - Present}
-       \textbf{Co-supervisors: Dr. Bahador Bahrami, Dr. Ophelia Deroy}
+       \textbf{Co-supervisors: Dr. Bahador Bahrami, Prof. Dr. Ophelia Deroy}
       \resumeItemListStart
-      	\item My research was focused on interindividual difference in learning to act or avoid. For now, I'm studying how people's behavior changes in groups.
+      	\item Conducted a comprehensive pre-registered research (\href{https://osf.io/rndpf}{Link}) on Pavlovian influence on instrumental learning.
+      	  \begin{itemize}[label=$-$]
+      	
+              \item Developed a Go/NoGo experiment using jsPsych (\href{https://sepsad.github.io/Orthogonalized-goNoGo-Task/}{Link}) and collected data through Amazon Mturk.
+              \item Analyzed the data and utilized reinforcement learning (RL) models to estimate subjects’ parameters.
+              \item Wrote the manuscript, submitted it to a peer-reviewed journal and addressed reviewers' comments (\href{https://www.webofscience.com/wos/woscc/full-record/10.1098%2Frsos.230447?type=doi&SID=EUW1ED0E40DDAW05ZudfVC7bHLN9d}{Link}).
+
+        	\end{itemize}
+
+
       	% \item Implemented the orthogonal go/nogo task using jsPsych that its demo could be accessed via this \href{https://7sbyszisu9.cognition.run/}{link}
-      	\item Analyzed the behavioral data using linear models such as ANOVA and mixed-model regression, reinfocement learning models such as Go/NoGo and 2-step task, planning-depth models such as heuristic models and decision trees.
-      	\item Collected and analyzed eye gaze data using pupil invisible eye tracker.
-      	\item Implemented online experiments using JsPsych and collected data using Amazon Mturk.
+      	\item Implemented RL models on data of individuals performing a 2-step task in a prosocial context to estimate model-based and model-free control parameters. 
+        % The modeling results were incorporated into the methods and results section of a peer-reviewed paper.
+      	\item Currently, working on a project focused on eye gaze tracking in interactive environments (\href{https://github.com/arghavanaslani/livegaze}{Link}).
+        \begin{itemize}[label=$-$]
+          \item Developing eye-tracking software based on the \href{https://docs.pupil-labs.com/invisible/real-time-api/introduction/}{Pupil Invisible API}  to analyze and visualize raw and real-time eye gaze data, and present results through heatmaps, scanpaths, and saliency maps
+          % \item Leveraging the Pupil Invisible device, its API, and Python backend frameworks to seamlessly stream analyzed gaze data.
+       \end{itemize}
+
+      	\item Supervising a student project investigating Pavlovian bias in group settings.
+        \begin{itemize}[label=$-$]
+          \item Managing the literature review and pre-registration submission (\href{https://osf.io/hkt27}{Link}).
+          \item Developing computational models to explore groups' Pavlovian bias and examining its relationship with members' individual Pavlovian bias.
+       \end{itemize}
       	% \item 
       	% \item Pre-Registration of the research: \href{https://osf.io/rndpf}{osf.io/rndpf}
       	% \begin{itemize}[label=$-$]
@@ -156,12 +204,13 @@
       	% \end{itemize}
       \resumeItemListEnd
       \resumeSubheading
-      {University of Tehran - \href{https://btcs.ut.ac.ir/}{BTCS lab} }{Tehran, Iran}
+      {University of Tehran - \href{https://utnbic.ir/en}{NBIC Lab} }{Tehran, Iran}
       {Undergraduate Research Assistant}{Summer 2019}
       \textbf{Supervisor: Dr. M.R. Abolghasemi Dahaqani}
       \resumeItemListStart
-          \item Attempted to replicate \href{https://pubmed.ncbi.nlm.nih.gov/25761001/}{"Preconscious Prediction of a Driver’s Decision Using Intracranial Recordings"}
-          \item Learned about using machine learning algorithms (such as SVM) for analyzing EEG data
+          \item Focused on signal processing techniques for EEG data feature engineering. The aim was to replicate the findings of this article (\href{https://pubmed.ncbi.nlm.nih.gov/25761001/}{Link}).
+          % \item Utilized the frequency domain methods (e.g., FFT) and the time domain methods (e.g., mean, variance) to preprocess the data in order to prepare it for the implementation of machine learning algorithms (e.g., SVM).
+          % \item Learned about employing ML algorithms (such as SVM) for classifying EEG data.
       \resumeItemListEnd
 
       % \resumeSubheading
@@ -174,13 +223,6 @@
   \resumeSubHeadingListEnd
 
   % \resumeSubHeadingListEnd
-  \section{Publications}
-  \begin{itemize}
-  \item \textbf{Saeedpour, S.}, Miandari, M., Deroy, O., Bahrami, B. (2023). Interindividual differences in Pavlovian influence on learning are consistent, Accepted at Royal Society Open Science
-  \item Navidi, P., \textbf{Saeedpour, S.}, Miandari, M., Ershadmanesh, S.,  Bahrami, B. (2023). Prosocial learning: Model-based or model-free?, PLoS One, \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287563}{doi.org/10.1371/journal.pone.0287563}
-  \end{itemize}
-
-
       
 % --------EXPERIENCE------------
 
@@ -189,13 +231,13 @@
 \section{Honors and Awards}
   
 
-\item \textbf{The Best Undergraduate Project Award} ECE school, University of Tehran\hfill  2022
+\item \textbf{The Best Undergraduate Thesis Award.} ECE school, University of Tehran. (\href{https://drive.google.com/file/d/1dFarQ_0jxwia8QhlvITzfBa2EX7LxTP8/view?usp=sharing}{Link}) \hfill  2022
 \\
     % \small
     % Coached the team "aFunnyRandomPhrase" from the Univesity of Tehran
     % \normalsize
 
-\item \textbf{ICPC world finalist (International Collegiate Programming Contest)} Dhaka, Bangladesh\hfill  Nov 2022
+\item \textbf{International Collegiate Programming Contest (ICPC) world finalist.} Bangladesh. (\href{https://drive.google.com/file/d/1wK22GhE4BWR9wMX0tNm0LfCSdLaK4h85/view?usp=sharing}{Link})\hfill  Nov 2022
 \\
     \small
     Coached the team "aFunnyRandomPhrase" from the Univesity of Tehran
@@ -213,7 +255,7 @@
 %  \item \textbf{Gold medalist} in the ACM ICPC regional contest \hfill  2018
   
   
-  \item \textbf{National Organization for Development of Exceptional Talents} (NODET) member \hfill  2010 – 2017
+  % \item \textbf{National Organization for Development of Exceptional Talents} (NODET) member \hfill  2010 – 2017
   \newpage
   
   \resumeSubHeadingListEnd
@@ -221,7 +263,7 @@
   \section{Work Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-    {Venture Capital Team - \href{s}{Khalgh Servat Sarzamin Parseh}}{Tehran, Iran}
+    {Venture Capital Team - \href{}{Khalgh Servat Sarzamin Parseh}}{Tehran, Iran}
     {Investment Analyst}{Aug. 2022 - present}
     \resumeItemListStart
       \item Analyzing early-stage startups using known frameworks such as pain points, and JTBD (job to be done).
@@ -232,24 +274,19 @@
       {YUZ Games Studio - \href{https://cafebazaar.ir}{Cafe Bazaar}}{Tehran, Iran}
       {Game Data Analyst}{Apr. 2021 - Aug. 2022}
       \resumeItemListStart
-        \item Using statistical and machine learning approaches to analyze YOYO games' users’ behavior in the game and optimizing various aspects of the game and levels to make for better and better user experience.
-        \item Cafe Bazaar the most popular Android application store in Iran, with more than 40 million users.
+        \item Employed statistical and machine learning approaches to analyze YUZ games' users’ behavior in the game and optimizing various aspects of the game and levels to improver gamers' experience.
+        % \item Cafe Bazaar the most popular Android application store in Iran, with more than 40 million users.
       \resumeItemListEnd
 
     \resumeSubheading
       {People Analytics Team - \href{https://cafebazaar.ir/app?l=en}{Cafe Bazaar}  }{Tehran, Iran}
       {Human Resources Data Analyst}{Jun. 2019 - Apr. 2021}
       \resumeItemListStart
-      	\item Using data-driven approaches to analyze employees performance and other related metrics to help the company make better decisions for creating a more productive work environment.
+      	\item Utilized data-driven approaches to analyze employees' profiles to optimise work conditions.
 
       \resumeItemListEnd
 
-    \resumeSubheading
-    {Allame Helli 1 High school}{Summer 2017 - Spring 2019}
-    {Olympiad in Astronomy Instructor}{}
-    \resumeItemListStart
-    \item Taught Data Analysis methods to students preparing for the National Olympiad in Astronomy \& Astrophysics (NOAA).
-    \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
 
@@ -327,8 +364,14 @@
        	\resumeItem{Engineering Probability and Statistics}{Instructor: Dr. Behnam Bahrak \hfill Spring 2020}
        	\resumeItem{Engineering Probability and Statistics}{Instructor: Dr. Abolghasemi Dahaqani \hfill Fall 2019}
       	% \resumeItem{Artificial Intelligence}{Instructor: Prof. M.Hossein Rohban \hfill  Fall 2020}
-      \resumeItemListEnd
+    \resumeItemListEnd
 
+    \resumeSubheading
+      {Instructor, Astronomy \& Astrophysics Olympiad  }{2017 - 2019}
+      {Allame Helli 1 High school}{}
+      \resumeItemListStart
+      \item Taught Data Analysis methods (e.g. linear models, Clustering) to students preparing for the National Olympiad in Astronomy \& Astrophysics (NOAA).
+    \resumeItemListEnd
 
     
   \resumeSubHeadingListEnd
@@ -361,12 +404,13 @@
 
 
 \resumeSubheading
-{Executive Director and Scientific Staff}
-{Winter 2019}{University of Tehran}
+{Executive Director at CNCS 2019}
+{Winter 2019}{University of Tehran (Cognitive Neuroscience Competiton for Students)}
 
 \resumeItemListStart
-\item Director at CNCS 2019, Cognitive Neuroscience Competiton for Students
-\item Gathered speakers on different topics in cognitive science, Managed a team to execute the event.
+\item Managed a team to execute the event.
+\item Gathered speakers on different topics in cognitive science.
+
 %\item Presented a talk about Applications of blockchain such as DAOs, stablecoins, etc.
 \resumeItemListEnd
 
@@ -377,7 +421,7 @@
 
 \resumeItemListStart
 % \vspace{-0.35cm} 
-\item Managed the activities of Theater groups, shows and performances, workshops and events around Performing Arts in University of Tehran. %0\hfill Spring-2021
+\item Managed the activities of Theater groups, shows and performances, workshops and events around Performing Arts in the University of Tehran. %0\hfill Spring-2021
 % \item Scientific Committee, Iran’s National Olympiad in informatics, final exams theory problems. %\hfill Summer-2020
 % \item Scientific member of Rasta school at summer 2020, developed creative methods to teach Flow algorithms to high school students.
 \resumeItemListEnd
@@ -386,24 +430,50 @@
 \resumeSubHeadingListEnd
 
 
-\section{Skills}
+\section{Technical Skills}
   \resumeSubHeadingListStart
     % \resumeItem{TOEFL} {Total: 104, Reading: 25, Listening: 30, Speaking: 26, Writing: 23}
-    \resumeItem{Programming}{Python, R, MATLAB, Sql, C++, JavaScript, Bash}
-    \resumeItem{Statistics \& Modelling}{Statistical Tests, GLM models, Reinfocement Learning models}
-    \resumeItem{Online Experiment Design}{jsPsych, PsychoToolBox, Cognition.run}
-    \resumeItem{Data Analytics Frameworks}{Pandas, Statsmodels, NumPy, Scikit-Learn}
-    \resumeItem{Visualization Frameworks}{Matplotlib, Seaborn, Plotly, ggplot2}
-    \resumeItem{Web Development \& Database}{HTML, CSS, Node.js, Docker, PostgreSQL}
-
+    \resumeItem{Programming}{Python, R, MATLAB, JavaScript, Sql, C++, Bash}
+    \resumeItem{Computational}{RL \& ML algorithms, Model fitting/selection, Statistical Ineference}
+    \resumeItem{Software}{jsPsych, PsychoToolBox, Pandas, Statsmodels, NumPy, Scikit-Learn, TensorFlow, Keras}
     \resumeItem{Miscellaneous}{Git, Jupyter Notebook, Linux, Windows, \LaTeX, Microsoft Office (Word, Excel, Powerpoint)}
 
 
   \resumeSubHeadingListEnd
   
-%\section{Hobbies}
-%  \resumeSubHeadingListStart
-%    \resumeItem{Sports}{Table Tennis, Mountain Climbing}
-%    \resumeItem{Arts}{Playing the Piano, Photography}
-%  \resumeSubHeadingListEnd
+\section{References}
+
+\resumeSubHeadingListStart
+
+
+
+\resumeSubheading
+{Dr. Bahador Bahrami - \href{bbahrami@gmail.com}{bahador.bahrami@psy.lmu.de}}
+{}{Senior Research Scientist, Faculty of Psychology and Educational Sciences, Ludwig Maximilian University, Munich}
+
+% \resumeItemListStart
+% \item Managed a team to execute the event.
+% \item Gathered speakers on different topics in cognitive science.
+
+%\item Presented a talk about Applications of blockchain such as DAOs, stablecoins, etc.
+% \resumeItemListEnd
+
+
+\resumeSubheading
+{Dr. Mohammad-Reza Abolghasemi-Dehaqani - \href{dehaqani@ut.ac.ir}{dehaqani@ut.ac.ir} }
+{}{Assistant Professor, School of Electrical and Computer Engineering, University of Tehran}
+
+\resumeSubheading
+{Prof. Dr. Ophelia Deroy - \href{ophelia.deroy@lrz.uni-muenchen.de}{ophelia.deroy@lrz.uni-muenchen.de} }
+{}{Chair for Philosophy of Mind and Neuroscience, Ludwig Maximilian University, Munich}
+% \resumeItemListStart
+% % \vspace{-0.35cm} 
+% \item Managed the activities of Theater groups, shows and performances, workshops and events around Performing Arts in the University of Tehran. %0\hfill Spring-2021
+% % \item Scientific Committee, Iran’s National Olympiad in informatics, final exams theory problems. %\hfill Summer-2020
+% % \item Scientific member of Rasta school at summer 2020, developed creative methods to teach Flow algorithms to high school students.
+% \resumeItemListEnd
+
+
+\resumeSubHeadingListEnd
+
 \end{document}
