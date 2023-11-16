@@ -18,10 +18,13 @@
 \usepackage{lastpage}
 \usepackage[margin=1.5cm, bottom=2cm]{geometry}
 \usepackage[colorlinks = true,
-            linkcolor = blue,
-            urlcolor  = blue,
+            linkcolor = green,
+            urlcolor  = RoyalBlue,
             citecolor = blue,
             anchorcolor = blue]{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
 \input{glyphtounicode}
 
 
@@ -96,15 +99,12 @@
 %----------HEADING-----------------
 
 
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-
-  
-  \multirow{2}{*}{\Huge Sepehr Saeedpour\hspace*{\fill}}    &\href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
-                                                            &+98 938 422 7574 \\
-                                                            & Linkedin: \href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad} \\
-% Prospective Ph.D student for the Gatsby Institute's program   
-                                                      & Github: \href{https://github.com/sepsad}{github.com/sepsad} \\ 
-                                                       & Personal Page: \href{https://sepsad.github.io}{sepsad.github.io} \\
+\begin{tabular*}{\textwidth}{c  l @{\extracolsep{\fill}} r}
+   & \multirow{2}{*}{\Huge  Sepehr Saeedpour\hspace*{\fill}}    &\href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
+                                        &       &+98 938 422 7574 \\
+  &       & Linkedin: \href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad} \\
+                  &    Prospective MSc. student & Github: \href{https://github.com/sepsad}{github.com/sepsad} \\ 
+                             &                          & Personal Page: \href{https://sepsad.github.io}{sepsad.github.io} \\
 \end{tabular*}
 
 
@@ -140,24 +140,24 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Tehran}{Tehran, Iran}
+      {University of Tehran - School of Electrical and Computer Engineering}{Tehran, Iran}
       {B.Sc. in Electrical Engineering}{2017 - 2022}
       \begin{itemize}
       	\vspace{-3pt}
       	\item Thesis: Interindividual differences in Learning to Act or Avoid. 
         \item Recognized with the Best Undergraduate Thesis Award in ECE school.
       \end{itemize}
-    \resumeSubheading
-    	{Allameh Helli 1 High School}{Tehran, Iran}
-    	{Diploma in Mathematics and Physics Discipline}{2013 - 2017}
+    % \resumeSubheading
+    % 	{Allameh Helli 1 High School}{Tehran, Iran}
+    % 	{Diploma in Mathematics and Physics Discipline}{2013 - 2017}
 
-    	Affiliated with the National Organization for the Development of Exceptional Talents (NODET)
+    % 	Affiliated with the National Organization for the Development of Exceptional Talents (NODET)
   \resumeSubHeadingListEnd
-
+  % --------PUBLICATIONS------------
   \section{Publications}
   \begin{itemize}
 
-  % --------PUBLICATIONS------------
+
   \item \textbf{Saeedpour, S.}, Miandari, M., Deroy, O., Bahrami, B. (2023). Interindividual differences in Pavlovian influence on learning are consistent, Royal Society Open Science, \href{https://royalsocietypublishing.org/doi/10.1098/rsos.230447}{doi.org/10.1098/rsos.230447}
   \item Navidi, P., \textbf{Saeedpour, S.}, Miandari, M., Ershadmanesh, S.,  Bahrami, B. (2023). Prosocial learning: Model-based or model-free?, PLoS One, \href{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287563}{doi.org/10.1371/journal.pone.0287563}
   \end{itemize}
@@ -189,7 +189,7 @@
           % \item Leveraging the Pupil Invisible device, its API, and Python backend frameworks to seamlessly stream analyzed gaze data.
        \end{itemize}
 
-      	\item Supervising a student project investigating Pavlovian bias in group settings.
+      	\item Supervising a research project investigating Pavlovian bias in group settings.
         \begin{itemize}[label=$-$]
           \item Managing the literature review and pre-registration submission (\href{https://osf.io/hkt27}{Link}).
           \item Developing computational models to explore groups' Pavlovian bias and examining its relationship with members' individual Pavlovian bias.
@@ -226,10 +226,10 @@
       
 % --------EXPERIENCE------------
 
-\resumeSubHeadingListStart
 
 \section{Honors and Awards}
   
+\resumeSubHeadingListStart
 
 \item \textbf{The Best Undergraduate Thesis Award.} ECE school, University of Tehran. (\href{https://drive.google.com/file/d/1dFarQ_0jxwia8QhlvITzfBa2EX7LxTP8/view?usp=sharing}{Link}) \hfill  2022
 \\
@@ -253,12 +253,12 @@
 \item \textbf{4th \& 11th Team} in the ACM ICPC regional contest \hfill Respectively 2018, 2017
 
 %  \item \textbf{Gold medalist} in the ACM ICPC regional contest \hfill  2018
+\resumeSubHeadingListEnd
   
   
   % \item \textbf{National Organization for Development of Exceptional Talents} (NODET) member \hfill  2010 – 2017
   \newpage
   
-  \resumeSubHeadingListEnd
 
   \section{Work Experience}
   \resumeSubHeadingListStart
@@ -274,7 +274,7 @@
       {YUZ Games Studio - \href{https://cafebazaar.ir}{Cafe Bazaar}}{Tehran, Iran}
       {Game Data Analyst}{Apr. 2021 - Aug. 2022}
       \resumeItemListStart
-        \item Employed statistical and machine learning approaches to analyze YUZ games' users’ behavior in the game and optimizing various aspects of the game and levels to improver gamers' experience.
+        \item Employed statistical and machine learning approaches to analyze YUZ games' users’ behavior in the game and optimizing various aspects of the game and levels to improve gamers' experience.
         % \item Cafe Bazaar the most popular Android application store in Iran, with more than 40 million users.
       \resumeItemListEnd
 
@@ -461,7 +461,7 @@
 
 \resumeSubheading
 {Dr. Mohammad-Reza Abolghasemi-Dehaqani - \href{dehaqani@ut.ac.ir}{dehaqani@ut.ac.ir} }
-{}{Assistant Professor, School of Electrical and Computer Engineering, University of Tehran}
+{}{Assistant Professor, School of Electrical and Computer Engineering, University of Tehran, Iran}
 
 \resumeSubheading
 {Prof. Dr. Ophelia Deroy - \href{ophelia.deroy@lrz.uni-muenchen.de}{ophelia.deroy@lrz.uni-muenchen.de} }
