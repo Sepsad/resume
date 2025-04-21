@@ -9,7 +9,6 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-% \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -18,24 +17,31 @@
 \usepackage{lastpage}
 \usepackage[margin=1.5cm, bottom=2cm]{geometry}
 \usepackage[colorlinks = true,
-            linkcolor = green,
-            urlcolor  = RoyalBlue,
+            linkcolor = blue,
+            urlcolor  = blue,
             citecolor = blue,
             anchorcolor = blue]{hyperref}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
+\usepackage{fontawesome5} % Add this for icons
+\usepackage{xcolor} % Enhanced color management
+\usepackage{titlesec} % Already included, but redefining
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{ragged2e}
 
 \input{glyphtounicode}
 
+% Define colors
+\definecolor{sectionColor}{RGB}{70, 130, 180} % Steel blue
+\definecolor{subheadingColor}{RGB}{70, 130, 180}
+\definecolor{dateColor}{RGB}{105, 105, 105} % Dark gray
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-%\cfoot{\vspace{0.5cm}Page \thepage\ of \pageref*{LastPage}}
 
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
 
 \urlstyle{same}
 
@@ -43,15 +49,14 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
+% Sections formatting - update with color
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\Large
-}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+  \vspace{-2pt}\scshape\raggedright\Large\color{sectionColor}\bf
+}{}{0em}{}[\color{sectionColor}\titlerule \vspace{-1pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item{
@@ -62,16 +67,16 @@
 % Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      #3 &  #4 \\
+      \textbf{\color{subheadingColor}#1} & \textcolor{dateColor}{#2} \\
+      #3 & \textit{#4} \\
     \end{tabular*}
 }
 
 \newcommand{\resumeSubheading}[4]{
   \item
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      #3 & #4 \\
+      \textbf{\color{subheadingColor}#1} & \textcolor{dateColor}{#2} \\
+      #3 & \textit{#4} \\
     \end{tabular*}
 }
 
@@ -87,75 +92,53 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}\vspace{-4pt}}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*, itemsep=1pt]\vspace{-4pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Contact info command with icons
+\newcommand{\contactInfo}[2]{\textcolor{sectionColor}{#1}~#2\hspace{1em}}
 
 \begin{document}
 
 %----------HEADING-----------------
 
-
-\begin{tabular*}{\textwidth}{c  l @{\extracolsep{\fill}} r}
-   & \multirow{2}{*}{\Huge  Sepehr Saeedpour\hspace*{\fill}}    &\href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
-                                        &       &+98 938 422 7574 \\
-  &       & Linkedin: \href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad} \\
-                  &    & Github: \href{https://github.com/sepsad}{github.com/sepsad} \\ 
-                             &                          & Personal Page: \href{https://sepsad.github.io}{sepsad.github.io} \\
-\end{tabular*}
-
-
-
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \multirow{4}{*}{\Huge Sepehr Saeedpour} & \href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com} \\
-%   & +98 938 422 7574 \\
-%   & Linkedin: \href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad} \\
-%   & Github: \href{https://github.com/sepsad}{github.com/sepsad} \\ 
-%   & Personal Page: \href{https://sepsad.github.io}{sepsad.github.io} \\
-%   \end{tabular*}
-  
-  
-% \section{Research Interests}
-% \vspace*{-\multicolsep}
-% \begin{center}
-% \begin{multicols}{3}
-	
-% \begin{itemize}
-% \item Learning \& Decision-making \\
-% \item Cognitive science \\
-% \item Machine Learning \\
-% \end{itemize}
-
-% %\item Computer vision
-% %\item Bioinformatics
-
-% \end{multicols}
-% \end{center}
-
+\begin{center}
+    {\Huge\textbf{\textcolor{sectionColor}{Sepehr Saeedpour}}}
+    
+    \vspace{0.1cm}
+    % {\Large\textcolor{dateColor}{\textit{Cognitive Scientist \& Computational Researcher}}}
+    
+    \vspace{0.2cm}
+    {\small
+    \contactInfo{\faEnvelope}{{\href{mailto:sepehrsdp@gmail.com}{sepehrsdp@gmail.com}}}
+    \contactInfo{\faPhone}{+33759517181}
+    \contactInfo{\faLinkedin}{{\href{https://www.linkedin.com/in/sepsad}{linkedin.com/sepsad}}}
+    \contactInfo{\faGithub}{{\href{https://github.com/sepsad}{github.com/sepsad}}}
+    \contactInfo{\faGlobe}{{\href{https://sepsad.github.io}{sepsad.github.io}}}
+    }
+\end{center}
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
 
     \resumeSubheading
-  {École Normale Supérieure - Département D'études Cognitives}{Paris, France}
-  {DENS and M.Sc. in Cognitive Science}{2024 - now}
+  % {École Normale Supérieure - Département D'études Cognitives}{Paris, France}
+  {École Normale Supérieure (ENS) - PSL University}{Paris, France}
+  {Normalien and M.Sc. in Cognitive Science}{2024 - now}
   \begin{itemize}
     \vspace{-3pt}
-    \item Cognitive modeling, neurotheory and AI
+    \item Cognitive modeling, neurotheory and AI Track
   \end{itemize}
 
   % Affiliated with the National Organization for the Development of Exceptional Talents (NODET)
     \resumeSubheading
       {University of Tehran - School of Electrical and Computer Engineering}{Tehran, Iran}
-      {B.Sc. in Electrical Engineering}{2017 - 2022}
+      {B.Sc. in Electrical Engineering}{2017 - 2023}
       \begin{itemize}
       	\vspace{-3pt}
       	\item Thesis: Interindividual differences in Learning to Act or Avoid. 
-        \item Recognized with the Best Undergraduate Thesis Award in ECE school.
+        \item Awarded Best Undergraduate Thesis in the ECE School.
       \end{itemize}
   
   \resumeSubHeadingListEnd
@@ -164,6 +147,16 @@
   \resumeSubHeadingListStart
 
 % --------EXPERIENCE------------
+
+    \resumeSubheading
+      {École Normale Supérieure (ENS) — \href{https://lnc2.dec.ens.fr/en/human-reinforcement-learning}{Human Reinforcement Learning Lab}}{Paris, France}
+      {Research Intern}{Feb 2024 – Present}
+      \textbf{Supervisor: Dr. Stefano Palminteri}
+    \resumeItemListStart
+      \item Investigate the computational mechanisms of experiential knowledge transmission (e.g., teaching).
+      \item Design and implement an online behavioural experiment \href{http://sepsad.github.io/Teacher_Pupil/}{(demo)}; recruited and tested 50 participants.
+    \resumeItemListEnd
+
     \resumeSubheading
       {Ludwig Maximilians Universität München - \href{https://crowdcognition.net/}{Crowd Cognition Group}}{Remote}
       {Research Assistant}{June 2021 - August 2024}
@@ -171,34 +164,27 @@
       \resumeItemListStart
       \item Conducted a comprehensive \href{https://osf.io/rndpf}{pre-registered research} on Pavlovian influence on instrumental learning.
       \begin{itemize}[label=$-$]
-    
-          \item Developed a Go/NoGo experiment using jsPsych (\href{https://sepsad.github.io/Orthogonalized-goNoGo-Task/}{Link}) 
-          \item Collected data through Amazon Mturk.
-          \item Conducted statistical analyses and utilized reinforcement learning models to explain subjects’ behavior.
-          \item Wrote the manuscript, submitted it to a peer-reviewed journal and \href{https://www.webofscience.com/wos/woscc/full-record/10.1098%2Frsos.230447?type=doi&SID=EUW1ED0E40DDAW05ZudfVC7bHLN9d}{addressed reviewers' comments}.
-
+        \item Developed an online, Go/NoGo experiment in jsPsych \href{https://sepsad.github.io/Orthogonalized-goNoGo-Task/}{(demo)}.
+        \item Performed statistical analyses and reinforcement‑learning modeling to characterize participants’ behavior.
+        \item Authored the manuscript, submitted it to a peer‑reviewed journal, and \href{https://www.webofscience.com/wos/woscc/full-record/10.1098%2Frsos.230447?type=doi&SID=EUW1ED0E40DDAW05ZudfVC7bHLN9d}{addressed reviewers’ comments}.
       \end{itemize}
-
-
-    % \item Implemented the orthogonal go/nogo task using jsPsych that its demo could be accessed via this \href{https://7sbyszisu9.cognition.run/}{link}
-    \item Contributed to a project on goal-oriented and habitual decision-making in prosocial settings
-    
-    \begin{itemize}[label=$-$]
-      \item Analyzed subjects' data and implemented RL models to estimate model-based and model-free parameters. 
-      % \item Developing computational models to explore groups' Pavlovian bias and examining its relationship with members' individual Pavlovian bias.
-   \end{itemize}
-        \item Worked on a project focused on eye gaze tracking in \href{https://www.youtube.com/watch?v=VxwGnRJ1xTQ&t=135s}{interactive environments}.
+      
+      \item Contributed to a project on goal‑directed and habitual decision‑making in \textbf{social} settings.
       \begin{itemize}[label=$-$]
-        \item Developed real-time eye-tracking software based on the \href{https://docs.pupil-labs.com/invisible/real-time-api/introduction/}{Pupil Invisible API}. 
-        \item Analyzed eye gaze data, and visualizing results through heatmaps, scanpaths, and saliency maps
-        % \item Leveraging the Pupil Invisible device, its API, and Python backend frameworks to seamlessly stream analyzed gaze data.
-     \end{itemize}
-
-       \item Co-supervised a research project investigating Pavlovian bias in group settings.
+        \item Analyzed behavioral data and implemented reinforcement‑learning models to estimate model‑based and model‑free control parameters.
+      \end{itemize}
+      
+      \item Worked on a project focused on eye‑gaze tracking in \href{https://www.youtube.com/watch?v=VxwGnRJ1xTQ&t=135s}{interactive environments}.
       \begin{itemize}[label=$-$]
-        \item Performed the literature review, formulated and \href{https://osf.io/hkt27}{pre-registered the hypothesis}.
-        % \item Developing computational models to explore groups' Pavlovian bias and examining its relationship with members' individual Pavlovian bias.
-     \end{itemize}
+        \item Built real‑time eye‑tracking software based on the \href{https://docs.pupil-labs.com/invisible/real-time-api/introduction/}{Pupil Invisible API}.
+        \item Analyzed gaze time serie data and visualized results with heatmaps, scanpaths, and saliency maps.
+      \end{itemize}
+      
+      \item Co‑supervised a study examining Pavlovian bias in \textbf{social} settings.
+      \begin{itemize}[label=$-$]
+        \item Formulated, and \href{https://osf.io/hkt27}{pre‑registered the hypothesis}.
+      \end{itemize}
+      
     
         % The modeling results were incorporated into the methods and results section of a peer-reviewed paper.
       	% \item 
@@ -210,16 +196,6 @@
       		% \item B.Sc. Thesis project
       	% \end{itemize}
       \resumeItemListEnd
-      \resumeSubheading
-      {University of Tehran - \href{https://utnbic.ir/en}{NBIC Lab} }{Tehran, Iran}
-      {Undergraduate Research Assistant}{Summer 2019}
-      \textbf{Supervisor: Dr. M.R. Abolghasemi Dahaqani}
-      \resumeItemListStart
-          \item Focused on recording and analyzing  EEG data. The aim was to replicate the findings of this article (\href{https://pubmed.ncbi.nlm.nih.gov/25761001/}{Link}).
-          % \item Utilized the frequency domain methods (e.g., FFT) and the time domain methods (e.g., mean, variance) to preprocess the data in order to prepare it for the implementation of machine learning algorithms (e.g., SVM).
-          % \item Learned about employing ML algorithms (such as SVM) for classifying EEG data.
-      \resumeItemListEnd
-
       % \resumeSubheading
       % {University of Tehran - Cognitive Systems Lab}{Tehran, Iran}
       % {Undergraduate Research Assistant}{Summer 2018}
@@ -260,11 +236,11 @@
 %  \item \textbf{Silver Medalist} in the \nth{11} Asia-Pacific Informatics Olympiad (APIO) \hfill  2017
 \item \textbf{Silver Medalist} in the \nth{12} National Olympiad of Astronomy and Astrophysics (NOAA) \hfill 2016
 \\
- \small
-  Silver medals are awarded to about 10 people selected after a year of competition among over 10000 students.
+%  \small
+  % Silver medals are awarded to about 10 people selected after a year of competition among over 10000 students.
   \normalsize
 
-\item \textbf{4th \& 11th Team} in the ACM ICPC regional contest \hfill Respectively 2018, 2017
+% \item \textbf{4th \& 11th Team} in the ACM ICPC regional contest \hfill Respectively 2018, 2017
 
 %  \item \textbf{Gold medalist} in the ACM ICPC regional contest \hfill  2018
 \resumeSubHeadingListEnd
@@ -371,8 +347,8 @@
   \resumeSubHeadingListStart
       
     \resumeSubheading
-      {Teaching Assistant, ECE Department}{}
-      {University of Tehran}{}
+      {Teaching Assistant - University of Tehran}{}
+      {}{}
       \resumeItemListStart
       	\resumeItem{Machine Learning}{Instructors: Prof. Nadjar Araabi \& Dr. Abolghasemi Dahaqani \hfill Fall 2020}
        	\resumeItem{Engineering Probability and Statistics}{Instructor: Dr. Behnam Bahrak \hfill Spring 2020}
